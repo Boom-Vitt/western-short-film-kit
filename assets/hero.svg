@@ -12,9 +12,9 @@
     <text x="82" y="232" font-size="90" font-weight="700" letter-spacing="-3">WESTERN</text>
     <text x="82" y="327" font-size="90" font-weight="700" letter-spacing="-3">SHORT FILM KIT</text>
     <text x="88" y="401" font-size="24" fill="#dce8ea">Original stories. Vertical cinema. Your direction.</text>
-    <rect x="88" y="448" width="270" height="43" rx="21" fill="#d6bd8b"/>
+    <rect x="88" y="448" width="310" height="43" rx="21" fill="#d6bd8b"/>
     <text x="112" y="477" font-size="18" font-weight="700" fill="#182d36">9:16 / PROMPT + WORKFLOW</text>
-    <text x="380" y="477" font-size="19" fill="#dce8ea">FREE / MIT / THAI GUIDE</text>
+    <text x="420" y="477" font-size="19" fill="#dce8ea">FREE / MIT / THAI GUIDE</text>
   </g>
   <rect x="1210" y="60" width="264" height="470" rx="16" fill="#0b1a23" stroke="#d6bd8b" stroke-width="2"/>
   <rect x="1234" y="123" width="216" height="387" fill="url(#door)"/>
