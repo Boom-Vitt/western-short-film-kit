@@ -25,7 +25,7 @@ def check(root):
         "prompts/MASTER-PROMPT.md", "prompts/REPAIR.md", "templates/PRODUCTION.md",
         "examples/one-floor-below-48s.md", "docs/GOOGLE-FLOW.md", "docs/EDITING.md",
         "docs/TEST-REPORT.md", "assets/hero.svg", ".github/workflows/check.yml",
-        "scripts/test_check_repo.py",
+        "scripts/check_repo.py", "scripts/test_check_repo.py",
     )
     errors.extend(f"missing required file: {name}" for name in required if not (root / name).is_file())
     documents = sorted(p for p in root.rglob('*.md') if not {'.git', '.superpowers', 'runs', 'media', 'exports'} & set(p.relative_to(root).parts))
@@ -54,6 +54,12 @@ def check(root):
         rows = re.findall(r'^\| (S\d{2}) \| (\d{2}):(\d{2})–(\d{2}):(\d{2}) \| (E01): “([^”]+)”', text, re.M)
         if [row[0] for row in rows] != [f'S{i:02}' for i in range(1, 7)]:
             errors.append('expected six ordered storyboard rows S01–S06')
+        headings = re.findall(r'^### (S\d{2}) · (\d{2}):(\d{2})–(\d{2}):(\d{2})$', text, re.M)
+        if headings != [row[:5] for row in rows]:
+            errors.append('prompt heading times/order do not match storyboard')
+        prompt_ids = re.findall(r'^```text\nShot (S\d{2})\.', text, re.M)
+        if prompt_ids != [row[0] for row in rows]:
+            errors.append('prompt order does not match storyboard')
         end = 0
         for shot, sm, ss, em, es, speaker, dialogue in rows:
             start, finish = int(sm) * 60 + int(ss), int(em) * 60 + int(es)
@@ -65,11 +71,11 @@ def check(root):
                 errors.append(f'{shot}: missing self-contained prompt or changed dialogue')
             elif 'Only Ella speaks' not in blocks[0]:
                 errors.append(f'{shot}: speaker does not match the script')
-            if blocks and any(token not in blocks[0] for token in (
-                'Vertical 9:16', '8-second', 'Ella Ward', 'dark brown bob',
+            if blocks and (not blocks[0].startswith(f'Shot {shot}. Vertical 9:16, 8-second ') or any(token not in blocks[0] for token in (
+                'Ella Ward', 'dark brown bob',
                 'navy wool coat', 'cream sweater', 'No subtitles',
-            )):
-                errors.append(f'{shot}: prompt is not self-contained')
+            ))):
+                errors.append(f'{shot}: prompt is not self-contained or has wrong format/duration')
         if end != 48:
             errors.append('storyboard must end at 48 seconds')
     hero = root / 'assets/hero.svg'

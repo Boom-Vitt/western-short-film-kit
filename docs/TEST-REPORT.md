@@ -13,7 +13,7 @@ python3 scripts/test_check_repo.py
 
 ตัวตรวจเช็กไฟล์จำเป็น ลิงก์ไฟล์ภายใน Markdown/HTML, code fences, SVG XML, storyboard S01–S06 ต่อเนื่องช็อตละ 8 วินาทีรวม 48 วินาที บทตรงกับ Prompt ผู้พูด Ella และรายละเอียดหลักใน Prompt ที่ใช้เดี่ยว ๆ ได้
 
-Regression check ใช้สำเนาชั่วคราวของชุดจริง ทดสอบเอกสารที่ถูกต้องและจงใจทำให้ผิด 8 กรณี: ลิงก์ Markdown หาย, ภาพ HTML หาย, timeline ขาด, บทเปลี่ยน, ผู้พูดผิด, Prompt แนวนอน, เทมเพลตหาย และ code fence ปิดไม่ครบ
+Regression check ใช้สำเนาชั่วคราวของชุดจริง ทดสอบเอกสารที่ถูกต้องและจงใจทำให้ผิด 12 กรณี: ลิงก์ Markdown หาย, ภาพ HTML หาย, timeline ขาด, บทเปลี่ยน, ผู้พูดผิด, Prompt แนวนอน, เทมเพลตหาย, code fence ปิดไม่ครบ, Prompt ระบุ 18 แทน 8 วินาที, หัวข้อช็อตเวลาไม่ตรงตาราง, สลับลำดับกรอบ Prompt และไฟล์ตัวตรวจหลักหาย
 
 GitHub Actions ใช้คำสั่งเดียวกันบน Ubuntu กับ Python 3.9 ดูผลจริงของแต่ละ commit ที่ [Actions](https://github.com/Boom-Vitt/western-short-film-kit/actions/workflows/check.yml) ขอบเขตการตรวจไม่ได้รวมทุกแพลตฟอร์มหรือไฟล์ production ที่ผู้ใช้เพิ่มภายหลัง
 

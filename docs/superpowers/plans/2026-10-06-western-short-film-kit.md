@@ -23,14 +23,14 @@
 ### Task 1: Publishable content and validator
 **Files:** README.md, WORKFLOW.md, AGENTS.md, LICENSE, THIRD_PARTY_NOTICES.md, assets/hero.svg; prompts/MASTER-PROMPT.md, prompts/REPAIR.md; templates/PRODUCTION.md; examples/one-floor-below-48s.md; docs/GOOGLE-FLOW.md, docs/EDITING.md, docs/TEST-REPORT.md; scripts/check_repo.py and scripts/test_check_repo.py; .github/workflows/check.yml.
 **Interfaces:** `check(root: Path) -> tuple[errors, document_count, link_count]`; CLI exit 0 on success and 1 on errors. Regression script executes the real checker against temporary altered copies.
-- [ ] Write a small regression script; verify the checker is missing before implementation.
-- [ ] Adapt the existing checker; write the kit and an original complete example.
-- [ ] Verify: `python3 scripts/check_repo.py` and `python3 scripts/test_check_repo.py` both exit 0; negative mutations fail for the expected reasons.
-- [ ] Commit all verified content.
+- [x] Write a small regression script; verify the checker is missing before implementation.
+- [x] Adapt the existing checker; write the kit and an original complete example.
+- [x] Verify: `python3 scripts/check_repo.py` and `python3 scripts/test_check_repo.py` both exit 0; negative mutations fail for the expected reasons.
+- [x] Commit all verified content.
 
 ### Task 2: Review and public delivery
 **Interfaces:** Existing verified content, public GitHub repository URL, standalone ZIP.
-- [ ] Fresh-context whole-repository review against the spec, plan and Review Focus; repair material findings and rerun checks.
+- [x] Fresh-context whole-repository review against the spec, plan and Review Focus; repair material findings and rerun checks.
 - [ ] Create the new public repo with gh, push main, verify visibility and full remote file tree.
 - [ ] Verify GitHub Actions passes, create a ZIP from the committed tree and verify its files.
 - [ ] Report the repository and ZIP links with the unrendered-media limitation.

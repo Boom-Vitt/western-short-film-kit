@@ -21,7 +21,12 @@ cases = [
     ("examples/one-floor-below-48s.md", "Shot S01. Vertical 9:16", "Shot S01. Horizontal 16:9", "self-contained"),
     ("templates/PRODUCTION.md", "DELETE", "", "missing required file"),
     ("README.md", None, "\n```text\n", "unclosed fenced block"),
+    ("examples/one-floor-below-48s.md", "Shot S01. Vertical 9:16, 8-second", "Shot S01. Vertical 9:16, 18-second", "self-contained"),
+    ("examples/one-floor-below-48s.md", "### S02 · 00:08–00:16", "### S02 · 00:09–00:19", "heading times/order"),
+    ("examples/one-floor-below-48s.md", "SWAP_SHOTS", "", "prompt order"),
+    ("scripts/check_repo.py", "DELETE", "", "missing required file"),
 ]
+failures = []
 for filename, before, after, expected in cases:
     with TemporaryDirectory() as temp:
         target = Path(temp) / "kit"
@@ -31,12 +36,19 @@ for filename, before, after, expected in cases:
             path.unlink()
         else:
             content = path.read_text(encoding="utf-8")
-            if before is None:
+            if before == "SWAP_SHOTS":
+                first = content.index("### S01 ·")
+                second = content.index("### S02 ·")
+                third = content.index("### S03 ·")
+                content = content[:first] + content[second:third] + content[first:second] + content[third:]
+            elif before is None:
                 content += after
             else:
                 assert before in content, (filename, before)
                 content = content.replace(before, after, 1)
             path.write_text(content, encoding="utf-8")
         errors, _, _ = checker.check(target)
-        assert any(expected in error for error in errors), (filename, expected, errors)
-print("PASS: valid kit + 8 invalid-content regression cases")
+        if not any(expected in error for error in errors):
+            failures.append((filename, expected, errors))
+assert not failures, failures
+print(f"PASS: valid kit + {len(cases)} invalid-content regression cases")
