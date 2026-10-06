@@ -1,7 +1,7 @@
 """Stdlib kit checks. Adapted from boombignose/chinese-short-film-flow (MIT); see THIRD_PARTY_NOTICES.md."""
 
 import re
-from xml.etree import ElementTree
+import struct
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -24,7 +24,8 @@ def check(root):
         "README.md", "WORKFLOW.md", "AGENTS.md", "LICENSE", "THIRD_PARTY_NOTICES.md",
         "prompts/MASTER-PROMPT.md", "prompts/REPAIR.md", "templates/PRODUCTION.md",
         "examples/one-floor-below-48s.md", "docs/GOOGLE-FLOW.md", "docs/EDITING.md",
-        "docs/TEST-REPORT.md", "assets/hero.svg", ".github/workflows/check.yml",
+        "docs/TEST-REPORT.md", "assets/hero.png", "assets/hero-prompt.md",
+        "assets/demo.mp4", "assets/demo.gif", "examples/quick-demo.md", ".github/workflows/check.yml",
         "scripts/check_repo.py", "scripts/test_check_repo.py",
     )
     errors.extend(f"missing required file: {name}" for name in required if not (root / name).is_file())
@@ -78,14 +79,16 @@ def check(root):
                 errors.append(f'{shot}: prompt is not self-contained or has wrong format/duration')
         if end != 48:
             errors.append('storyboard must end at 48 seconds')
-    hero = root / 'assets/hero.svg'
+    hero = root / 'assets/hero.png'
     if hero.is_file():
-        try:
-            svg = ElementTree.parse(hero).getroot()
-            if svg.tag != '{http://www.w3.org/2000/svg}svg':
-                errors.append('hero is not an SVG')
-        except ElementTree.ParseError:
-            errors.append('hero is not valid SVG XML')
+        with hero.open('rb') as file:
+            header = file.read(24)
+        if len(header) != 24 or header[:8] != b'\x89PNG\r\n\x1a\n' or header[12:16] != b'IHDR':
+            errors.append('hero is not a PNG')
+        else:
+            width, height = struct.unpack('>II', header[16:24])
+            if not height or width < 1000 or not 2.5 <= width / height <= 3.1:
+                errors.append('hero must be a wide high-resolution banner')
     return errors, len(documents), links
 
 
@@ -95,5 +98,5 @@ if __name__ == '__main__':
     for error in errors:
         print('FAIL:', error)
     if not errors:
-        print(f'PASS: {documents} Markdown files; {links} local references; 6 shot prompts; 48s timeline; SVG banner')
+        print(f'PASS: {documents} Markdown files; {links} local references; 6 shot prompts; 48s timeline; PNG banner')
     sys.exit(bool(errors))

@@ -2,13 +2,19 @@
 
 ## ชุดหนังจีนเดิม
 
-โครงสร้าง Prompt / workflow / production template และตัวตรวจเอกสารใน `scripts/check_repo.py` ต่อจาก [boombignose/chinese-short-film-flow](https://github.com/boombignose/chinese-short-film-flow) ตัวตรวจดัดแปลงให้ใช้เรื่องใหม่และ SVG แทน PNG
+โครงสร้าง Prompt / workflow / production template รูปแบบหน้า README และตัวตรวจเอกสารใน `scripts/check_repo.py` ต่อจาก [boombignose/chinese-short-film-flow](https://github.com/boombignose/chinese-short-film-flow) ตัวตรวจดัดแปลงสำหรับเรื่องใหม่และ regression checks ของชุดนี้
 
 MIT License — Copyright (c) 2026 boombignose. ประกาศสิทธิ์และข้อความอนุญาตของต้นทางคงไว้ใน [LICENSE](LICENSE) งานเพิ่มเติมของชุดนี้เผยแพร่ภายใต้ MIT เช่นกัน
 
 ## เนื้อหาที่สร้างใหม่
 
-เรื่อง **One Floor Below**, character bible, storyboard, Prompt และแบนเนอร์ SVG จัดทำขึ้นสำหรับชุดนี้ ภาพแบนเนอร์เป็นกราฟิกเวกเตอร์ประกอบหน้า repo ไม่ใช่เฟรมจากหนังหรือผลเจนวิดีโอ ไม่มีฟุตเทจนักแสดง เพลง หรือเสียงอ้างอิงจากหนังฝรั่งแนบมา
+เรื่อง **One Floor Below**, character bible, storyboard และ Prompt จัดทำขึ้นสำหรับชุดนี้ ตัวละครสมมติ ไม่ใช้ชื่อหรือภาพอ้างอิงนักแสดงจริง
+
+- [ภาพปก](assets/hero.png) สร้างด้วย built-in imagegen ใช้แบนเนอร์ของชุดหนังจีนเป็น reference ด้านการจัดวาง — [Prompt](assets/hero-prompt.md) เป็นภาพแนวคิด ไม่ใช่เฟรมจากวิดีโอหรือ reference ที่ใช้เจนคลิป
+- [คลิปทดลอง](assets/demo.mp4) สร้างใน Google Flow ด้วย Veo 3.1 - Lite จากข้อความของเรื่องใหม่ ไม่แนบภาพหรือเสียงจากหนังฝรั่ง — [Prompt และการตั้งค่า](examples/quick-demo.md)
+- [GIF](assets/demo.gif) ทำจากคลิปทดลองเดียวกันด้วย FFmpeg ย่อเป็น 240×426 และ 8 fps ไม่มีเสียง
+
+ไม่มีฟุตเทจนักแสดง เพลง หรือเสียงอ้างอิงจากหนังฝรั่งแนบมา คลิปทดลองยังต้องตรวจเสียงและ lip sync โดยมนุษย์ก่อนรับเป็นงาน final — [ผลตรวจ](docs/TEST-REPORT.md)
 
 ## เครื่องมือและเอกสารอ้างอิง
 

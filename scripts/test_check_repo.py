@@ -25,6 +25,9 @@ cases = [
     ("examples/one-floor-below-48s.md", "### S02 · 00:08–00:16", "### S02 · 00:09–00:19", "heading times/order"),
     ("examples/one-floor-below-48s.md", "SWAP_SHOTS", "", "prompt order"),
     ("scripts/check_repo.py", "DELETE", "", "missing required file"),
+    ("assets/hero.png", "CORRUPT_PNG", "", "hero is not a PNG"),
+    ("assets/hero.png", "ZERO_HEIGHT", "", "wide high-resolution banner"),
+    ("assets/demo.mp4", "DELETE", "", "missing required file"),
 ]
 failures = []
 for filename, before, after, expected in cases:
@@ -34,6 +37,12 @@ for filename, before, after, expected in cases:
         path = target / filename
         if before == "DELETE":
             path.unlink()
+        elif before == "CORRUPT_PNG":
+            path.write_bytes(b"not a PNG")
+        elif before == "ZERO_HEIGHT":
+            content = bytearray(path.read_bytes())
+            content[20:24] = b"\x00" * 4
+            path.write_bytes(content)
         else:
             content = path.read_text(encoding="utf-8")
             if before == "SWAP_SHOTS":
