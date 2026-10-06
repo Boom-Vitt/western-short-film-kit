@@ -16,7 +16,7 @@ cases = [
     ("README.md", None, "\n[Broken](missing.md)\n", "missing/escaping reference"),
     ("README.md", None, '\n<img src="missing.png">\n', "missing/escaping reference"),
     ("examples/one-floor-below-48s.md", "00:00–00:08", "00:01–00:08", "timeline gap"),
-    ("examples/one-floor-below-48s.md", '"I know that tune."', '"I forgot that tune."', "changed dialogue"),
+    ("examples/one-floor-below-48s.md", '"ฉันจำทำนองนั้นได้"', '"ฉันลืมทำนองนั้นแล้ว"', "changed dialogue"),
     ("examples/one-floor-below-48s.md", "Only Ella speaks", "Only Alex speaks", "speaker does not match"),
     ("examples/one-floor-below-48s.md", "Shot S01. Vertical 9:16", "Shot S01. Horizontal 16:9", "self-contained"),
     ("templates/PRODUCTION.md", "DELETE", "", "missing required file"),
@@ -28,6 +28,8 @@ cases = [
     ("assets/hero.png", "CORRUPT_PNG", "", "hero is not a PNG"),
     ("assets/hero.png", "ZERO_HEIGHT", "", "wide high-resolution banner"),
     ("assets/demo.mp4", "DELETE", "", "missing required file"),
+    ("examples/one-floor-below-48s.md", "Only Ella speaks, in Thai", "Only Ella speaks, in English", "spoken Thai"),
+    ("examples/quick-demo.md", "Only this fictional woman speaks, in Thai", "Only this fictional woman speaks, in English", "quick demo"),
 ]
 failures = []
 for filename, before, after, expected in cases:

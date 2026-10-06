@@ -11,7 +11,7 @@ MIT License — Copyright (c) 2026 boombignose. ประกาศสิทธ�
 เรื่อง **One Floor Below**, character bible, storyboard และ Prompt จัดทำขึ้นสำหรับชุดนี้ ตัวละครสมมติ ไม่ใช้ชื่อหรือภาพอ้างอิงนักแสดงจริง
 
 - [ภาพปก](assets/hero.png) สร้างด้วย built-in imagegen ใช้แบนเนอร์ของชุดหนังจีนเป็น reference ด้านการจัดวาง — [Prompt](assets/hero-prompt.md) เป็นภาพแนวคิด ไม่ใช่เฟรมจากวิดีโอหรือ reference ที่ใช้เจนคลิป
-- [คลิปทดลอง](assets/demo.mp4) สร้างใน Google Flow ด้วย Veo 3.1 - Lite จากข้อความของเรื่องใหม่ ไม่แนบภาพหรือเสียงจากหนังฝรั่ง — [Prompt และการตั้งค่า](examples/quick-demo.md)
+- [คลิปทดลองพูดไทย](assets/demo.mp4) สร้างใน Google Flow ด้วย Veo 3.1 - Lite จากข้อความของเรื่องใหม่ ไม่แนบภาพหรือเสียงจากหนังฝรั่ง ลบซับเพี้ยนที่โมเดลเติมด้วย FFmpeg โดยคงเสียงเดิม — [Prompt และการตั้งค่า](examples/quick-demo.md) · [รายละเอียดการแก้และผลตรวจ](docs/TEST-REPORT.md)
 - [GIF](assets/demo.gif) ทำจากคลิปทดลองเดียวกันด้วย FFmpeg ย่อเป็น 240×426 และ 8 fps ไม่มีเสียง
 
 ไม่มีฟุตเทจนักแสดง เพลง หรือเสียงอ้างอิงจากหนังฝรั่งแนบมา คลิปทดลองยังต้องตรวจเสียงและ lip sync โดยมนุษย์ก่อนรับเป็นงาน final — [ผลตรวจ](docs/TEST-REPORT.md)

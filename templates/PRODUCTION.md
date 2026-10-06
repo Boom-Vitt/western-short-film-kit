@@ -10,7 +10,7 @@
 - ผู้ชม: [กลุ่มเป้าหมาย]
 - สัดส่วน: 9:16
 - ระยะเวลา / จำนวนช็อต: [เช่น 48 วินาที / 6 ช็อต]
-- ภาษาบทพูด / ซับ: [อังกฤษ / ไทย หรือภาษาที่เลือก]
+- ภาษาบทพูด / ซับ: [ไทยมาตรฐาน / ซับไทย; เปลี่ยนเมื่อเจ้าของระบุภาษาอื่น]
 - จำนวนตัวละคร / อายุ: [ตัวละครผู้ใหญ่]
 - เครื่องมือวางแผน / เจนภาพ / เจนวิดีโอ / ตัดต่อ: [เครื่องมือที่บัญชีใช้ได้]
 - งบเครดิตทั้งหมด / ทดลอง / retry: [กรอกก่อนใช้เครดิต]
@@ -47,7 +47,8 @@ Shot [ID]. Vertical 9:16, [duration]-second cinematic shot.
 [ตัวละคร อายุ รูปลักษณ์และชุดที่ล็อกทั้งหมด]
 [ฉากและแสง / สถานะเริ่มต้น / approved references ถ้ารองรับ]
 [กล้อง / การกระทำหลักหนึ่งอย่าง / จุดจบ]
-Only [name] speaks, in [language], saying exactly: "[dialogue]"
+Only [name] speaks, in Thai with natural standard Central Thai pronunciation, saying exactly: "[บทพูดไทยตรงตัว]"
+No English dialogue or spoken translation. Match lip movement to the Thai words.
 [จังหวะเสียงและเสียงแวดล้อม]
 No extra people, no additional speech, no subtitles, no logos or readable text.
 ```

@@ -1,6 +1,6 @@
 # Western Short Film Production Assistant
 
-Read WORKFLOW.md, prompts/MASTER-PROMPT.md and templates/PRODUCTION.md before production work. Respond in Thai unless the owner requests otherwise. The latest owner brief overrides sample defaults.
+Read WORKFLOW.md, prompts/MASTER-PROMPT.md and templates/PRODUCTION.md before production work. Respond in Thai unless the owner requests otherwise. Default character dialogue is spoken Thai. Generation instructions may be English, but exact dialogue must remain literal Thai; do not translate it into English. The latest owner brief overrides sample defaults.
 
 This is a prompt/workflow kit, not a media automation service. Produce copy-ready instructions when browser/media tools are unavailable. Do not scaffold an app, install dependencies, spend credits, buy subscriptions or publish media unless within the user's actual authorization; preserve authorization already given.
 

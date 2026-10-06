@@ -72,6 +72,8 @@ def check(root):
                 errors.append(f'{shot}: missing self-contained prompt or changed dialogue')
             elif 'Only Ella speaks' not in blocks[0]:
                 errors.append(f'{shot}: speaker does not match the script')
+            if blocks and ('Only Ella speaks, in Thai' not in blocks[0] or not re.search(r'[\u0e00-\u0e7f]', dialogue)):
+                errors.append(f'{shot}: expected spoken Thai dialogue')
             if blocks and (not blocks[0].startswith(f'Shot {shot}. Vertical 9:16, 8-second ') or any(token not in blocks[0] for token in (
                 'Ella Ward', 'dark brown bob',
                 'navy wool coat', 'cream sweater', 'No subtitles',
@@ -79,6 +81,11 @@ def check(root):
                 errors.append(f'{shot}: prompt is not self-contained or has wrong format/duration')
         if end != 48:
             errors.append('storyboard must end at 48 seconds')
+        quick = root / 'examples/quick-demo.md'
+        if quick.is_file() and rows:
+            demo = quick.read_text(encoding='utf-8')
+            if 'Only this fictional woman speaks, in Thai' not in demo or f'saying exactly: "{rows[0][-1]}"' not in demo:
+                errors.append('quick demo must use the S01 spoken Thai dialogue')
     hero = root / 'assets/hero.png'
     if hero.is_file():
         with hero.open('rb') as file:
