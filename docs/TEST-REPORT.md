@@ -17,6 +17,14 @@ Regression check ใช้สำเนาชั่วคราวของชุ
 
 GitHub Actions ใช้คำสั่งเดียวกันบน Ubuntu กับ Python 3.9 ดูผลจริงของแต่ละ commit ที่ [Actions](https://github.com/Boom-Vitt/western-short-film-kit/actions/workflows/check.yml) ขอบเขตการตรวจไม่ได้รวมทุกแพลตฟอร์มหรือไฟล์ production ที่ผู้ใช้เพิ่มภายหลัง
 
+## ผลตรวจชุดแจก
+
+ผลตรวจในเครื่อง: PASS — 13 ไฟล์ Markdown, 41 ลิงก์ไฟล์ภายใน, Prompt 6 ช็อต, storyboard 48 วินาที และเอกสารผิด 12 กรณีที่ตัวตรวจจับได้
+
+[GitHub Actions รอบเผยแพร่](https://github.com/Boom-Vitt/western-short-film-kit/actions/runs/37432687634) ผ่านทั้งสองคำสั่งบน Python 3.9 ตรวจหน้า README และภาพปกบน GitHub แล้ว ลิงก์ ZIP สาธารณะดาวน์โหลดได้โดยไม่ล็อกอินและไฟล์ทั้ง 19 ไฟล์ตรงกับต้นฉบับที่ commit
+
+การตรวจนี้เป็นการตรวจชุดไฟล์ ไม่ได้ใช้เครดิตเจนสื่อ
+
 ## ยังไม่ได้ตรวจจากสื่อจริง
 
 | รายการ | สถานะ |

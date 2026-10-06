@@ -31,6 +31,6 @@
 ### Task 2: Review and public delivery
 **Interfaces:** Existing verified content, public GitHub repository URL, standalone ZIP.
 - [x] Fresh-context whole-repository review against the spec, plan and Review Focus; repair material findings and rerun checks.
-- [ ] Create the new public repo with gh, push main, verify visibility and full remote file tree.
-- [ ] Verify GitHub Actions passes, create a ZIP from the committed tree and verify its files.
-- [ ] Report the repository and ZIP links with the unrendered-media limitation.
+- [x] Create the new public repo with gh, push main, verify visibility and full remote file tree.
+- [x] Verify GitHub Actions passes, create a ZIP from the committed tree and verify its files.
+- [x] Report the repository and ZIP links with the unrendered-media limitation.
