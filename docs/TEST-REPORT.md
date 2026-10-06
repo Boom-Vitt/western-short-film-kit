@@ -52,6 +52,10 @@ python3 scripts/test_check_repo.py
 
 ผ่านทั้งสองคำสั่ง: ลิงก์และไฟล์จำเป็น, header/ขนาดแบนเนอร์ PNG, storyboard 6 ช็อตรวม 48 วินาที, บท/ผู้พูดและ Prompt ใช้เดี่ยวได้ รวม regression 15 กรณีที่จงใจทำเนื้อหาผิด ตัวตรวจ PNG ตรวจ header และมิติ ไม่ได้ถอดรหัสภาพทั้งหมด ตัวตรวจเอกสารไม่ได้ตรวจคุณภาพวิดีโอ
 
+ตรวจหน้า GitHub แล้ว: ปกและ GIF แสดงได้ เมนูเดโมนำไปตำแหน่งที่ถูกต้อง ลิงก์ MP4 เปิดหน้าไฟล์ที่มี Download raw file / View raw โดยไม่มีเครื่องเล่นในหน้านั้น Chrome ที่ใช้ตรวจบล็อก View raw (`ERR_BLOCKED_BY_CLIENT`) จึงยังไม่ยืนยันการเล่น MP4 จากลิงก์ raw
+
+ZIP สาธารณะดาวน์โหลดได้โดยไม่ล็อกอิน และเนื้อหาตรงกับไฟล์ที่ติดตามทั้ง 24 ไฟล์ ZIP ในเครื่องแตกแล้วผ่านตัวตรวจทั้งสองคำสั่ง ดูคลิปพร้อมเสียงได้โดยเปิด `assets/demo.mp4` จาก ZIP
+
 ดู CI ของแต่ละ commit ที่ [GitHub Actions](https://github.com/Boom-Vitt/western-short-film-kit/actions/workflows/check.yml) ผล revision แรกก่อนเพิ่มสื่ออยู่ใน [TEST-REPORT-v1](TEST-REPORT-v1.md)
 
 ## ขอบเขตที่ยังไม่ได้ทดสอบ

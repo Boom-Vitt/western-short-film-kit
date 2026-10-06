@@ -35,6 +35,6 @@ Quiet elevator hum, no music, no narrator, no other speech. No subtitles, no cap
 
 ## 3. ดูตัวอย่างและไปต่อ
 
-[เปิด MP4 พร้อมเสียง](../assets/demo.mp4) · [GIF พรีวิวเงียบ](../assets/demo.gif) · [ผลตรวจและข้อจำกัด](../docs/TEST-REPORT.md)
+[ไฟล์ MP4 พร้อมเสียง](../assets/demo.mp4) · [GIF พรีวิวเงียบ](../assets/demo.gif) · [ผลตรวจและข้อจำกัด](../docs/TEST-REPORT.md)
 
 เดโมเป็นช็อตทดลอง S01 จากข้อความ ไม่ได้ใช้ภาพปกเป็น reference ของตัวละคร ชุดบท 48 วินาทีเป็นแผนสำหรับทำต่อ เมื่อจะทำครบเรื่องให้สร้างและเลือก approved references แล้วทำตาม [WORKFLOW](../WORKFLOW.md)

@@ -79,7 +79,9 @@
 </p>
 
 <p align="center"><strong>คลิปทดลองจริง · Google Flow · 8 วินาที · 9:16</strong><br>
-GIF ไม่มีเสียง · <a href="assets/demo.mp4">เปิด MP4 พร้อมเสียง</a> · <a href="docs/TEST-REPORT.md">อ่านผลตรวจ</a></p>
+GIF ไม่มีเสียง · <a href="assets/demo.mp4">ไฟล์ MP4 พร้อมเสียง</a> · <a href="docs/TEST-REPORT.md">อ่านผลตรวจ</a></p>
+
+GitHub แสดง MP4 เป็นหน้าไฟล์ ให้กด **Download raw file** หรือ [ดาวน์โหลด ZIP](https://github.com/Boom-Vitt/western-short-film-kit/archive/refs/heads/main.zip) แล้วเปิด `assets/demo.mp4` ในเครื่องเพื่อดูพร้อมเสียง
 
 > คลิปนี้เป็น **ช็อตทดลองหนึ่งช็อต** ผลตรวจและข้อจำกัดระบุในรายงาน ยังไม่ได้เจนหนังครบ 48 วินาทีหรือทดสอบความต่อเนื่องข้ามช็อต
 
