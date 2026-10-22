@@ -1,6 +1,17 @@
+<!-- BBN:HEADER:START -->
 <div align="center">
 
-<img src="assets/hero.png" alt="Western Short Film — ภาพแนวคิดหญิงสาวในลิฟต์ สำหรับเวิร์กโฟลว์หนังฝรั่งแนวตั้ง ChatGPT Claude และ Google Flow" width="100%">
+<img src=".github/brand/banner.svg" width="100%" alt="Western Short Film Kit — Free kit for vertical, Thai-speaking Western shorts with AI" />
+
+<a href="https://github.com/Boom-Vitt/western-short-film-kit/stargazers"><img src="https://img.shields.io/github/stars/Boom-Vitt/western-short-film-kit?style=flat-square&color=14b8a6&labelColor=0b1220" alt="stars" /></a>
+<a href="https://github.com/Boom-Vitt/western-short-film-kit/commits/main"><img src="https://img.shields.io/github/last-commit/Boom-Vitt/western-short-film-kit?style=flat-square&color=14b8a6&labelColor=0b1220" alt="last commit" /></a>
+<a href="https://github.com/Boom-Vitt"><img src="https://img.shields.io/badge/by-BoomBigNose-14b8a6?style=flat-square&labelColor=0b1220" alt="by BoomBigNose" /></a>
+
+</div>
+<!-- BBN:HEADER:END -->
+
+<div align="center">
+
 
 # สร้างหนังสั้นฝรั่งพูดไทย ให้เป็นเรื่องของคุณ
 
@@ -185,3 +196,15 @@ western-short-film-kit/
 ---
 
 **ฟรี · ใช้ได้ · แก้ได้ · Fork ได้** ภายใต้ [MIT](LICENSE) เก็บประกาศสิทธิ์เมื่อนำไปแจกต่อ เงื่อนไขของบริการและสื่อที่ผู้ใช้เพิ่มยังเป็นของเจ้าของเดิม โครงการอิสระของ BoomBigNose ไม่ใช่ผลิตภัณฑ์ทางการของ OpenAI, Anthropic หรือ Google — [ที่มาและเครดิต](THIRD_PARTY_NOTICES.md)
+
+<!-- BBN:FOOTER:START -->
+---
+
+<div align="center">
+
+**สร้างโดย [BoomBigNose](https://github.com/Boom-Vitt)** · [Kruoop.com](https://kruoop.com) แหล่งเรียน AI + คอมมูนิตี้ · [Seeneo.ai](https://seeneo.ai) · [YouTube 220K](https://www.youtube.com/@BoomBigNose)
+
+<sub>ถ้าโปรเจกต์นี้มีประโยชน์ กด ⭐ ให้กำลังใจกันได้เลย</sub>
+
+</div>
+<!-- BBN:FOOTER:END -->
